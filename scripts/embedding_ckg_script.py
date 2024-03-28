@@ -27,4 +27,5 @@ adapter.write_edges()
 
 # convenience and import stats
 bc.write_import_call()
+
 bc.summary()

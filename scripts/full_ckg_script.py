@@ -9,9 +9,11 @@ bc = BioCypher(
     biocypher_config_path="config/biocypher_config_full.yaml",
 )
 
+limit=0
+
 # create CKG adapter
 adapter = CKGAdapter(
-    limit_import_count=100, # for testing; remove or set to 0 for full import
+    limit_import_count=limit, # for testing; remove or set to 0 for full import
     biocypher_driver=bc,
     # dirname=output_directory,
 ) 
@@ -24,4 +26,9 @@ adapter.write_edges()
 
 # convenience and import stats
 bc.write_import_call()
-bc.summary()
+
+bc.log_duplicates()
+bc.log_missing_input_labels()
+if limit>1000:
+    bc.summary()
+#bc.summary()
