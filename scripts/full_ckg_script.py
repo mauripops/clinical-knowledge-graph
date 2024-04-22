@@ -9,7 +9,7 @@ bc = BioCypher(
     biocypher_config_path="config/biocypher_config_full.yaml",
 )
 
-limit=0
+limit=100
 
 # create CKG adapter
 adapter = CKGAdapter(

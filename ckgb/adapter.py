@@ -34,7 +34,7 @@ class CKGAdapter:
             db_name="graph.db",
             db_uri="bolt://localhost:7687",
             db_user="neo4j",
-            db_passwd="testmauripops",
+            db_passwd="postgres",
             multi_db=False,
             max_connection_lifetime=7200,
         )

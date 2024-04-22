@@ -3,9 +3,10 @@ biocypher:
   offline: true
   strict_mode: true
   schema_config_path: config/full_schema_config.yaml
+  output_directory: biocypher-out
 neo4j:
-  database_name: strict
-  password: your_password_here
+  database_name: graph.db
+  password: 'postgres'
   delimiter: '¦'
   quote_character: '"'
 
@@ -18,4 +19,4 @@ postgresql:
   delimiter: '\t'
 
   import_call_bin_prefix: ''
-  import_call_file_prefix: biocypher-out/20240322194035/
+  import_call_file_prefix: biocypher-out/
